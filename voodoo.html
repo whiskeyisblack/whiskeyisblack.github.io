@@ -1,0 +1,32 @@
+<html>
+    <title>Asim Khan | Confetti</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/p5.js"></script>
+    <body>
+        <h1>Voodoo Magic</h1>
+        <script>
+                function setup() {
+                  createCanvas(1420, 1040);
+                  background(230);
+                  strokeWeight(2);
+                  fill('#222222');
+                  frameRate(140);
+                  stroke(237, 34, 93);
+                }
+                
+                var size = 80;
+                
+                function draw() {
+                    if(mouseIsPressed){
+                        size -= 1
+                        ellipse(mouseX , mouseY, size, size);
+                    }
+                    
+                    if (size < -80){
+                        size = 80;
+                    }
+                    
+                }
+                setup()
+                </script>
+    </body>
+</html>
